@@ -50,6 +50,7 @@
     `((t
           (
               :foreground ,monokai-green
+              :background ,monokai-gray
               :inherit mode-line)))
     ""
     :group 'powerline)
@@ -66,6 +67,7 @@
     `((t
           (
               :foreground ,monokai-blue
+              :background ,monokai-violet
               :inherit mode-line)))
     ""
     :group 'powerline)
@@ -104,27 +106,20 @@
                                  (when powerline-display-mule-info
                                      (powerline-raw mode-line-mule-info face0var 'l))
                                  (powerline-raw "%*" face0 'l)
+                                 (funcall separator-left face0 face2)
                                  (when powerline-display-buffer-size
                                      (powerline-buffer-size face0 'l))
                                  (powerline-raw " " face0)
-                                 (powerline-raw " " face1)
                                  (powerline-raw buffer face0)
-                                 ;;          (powerline-buffer-id mode-line-buffer-id 'l)
                                  (when (and (boundp 'which-func-mode) which-func-mode)
                                      (powerline-raw which-func-format nil 'l))
-                                 (powerline-raw " " face1)
-                                 ;; (funcall separator-left mode-line face1)
                                  (when (and (boundp 'erc-track-minor-mode) erc-track-minor-mode)
                                      (powerline-raw erc-modified-channels-object face0 'l))
                                  (powerline-major-mode face0 'l)
-                                 (powerline-raw " " face0)
                                  (powerline-process face0)
                                  (powerline-narrow face0 'l)
-                                 (powerline-raw " " face1)
-                                 ;;          (funcall separator-left face1 face2)
                                  (powerline-vc face0 'r)
-                                 (powerline-raw " " face1)
-                                 (powerline-raw (format "%s " (get-char-property (point) 'face)) face0 'l)
+                                 (powerline-raw (format "%s" (get-char-property (point) 'face)) face2 'l)
                                  (when (bound-and-true-p nyan-mode)
                                      (powerline-raw (list (nyan-create)) face0 'l))))
                          (rhs
@@ -133,14 +128,14 @@
                                  ;;          (funcall separator-right face2 face1)
                                  (unless window-system
                                      (powerline-raw (char-to-string #xe0a1) face4 'l))
-                                 (powerline-raw "%4l" face3 'l)
-                                 (powerline-raw ":" face3 'l)
-                                 (powerline-raw "%3c" face3 'r)
+                                 (powerline-raw "%4l" face1 'l)
+                                 (powerline-raw ":" face1 'l)
+                                 (powerline-raw "%3c" face1 'r)
                                  ;;          (funcall separator-right face1 mode-line)
-                                 (powerline-raw " " face4)
-                                 (powerline-raw "%6p" face4 'r)
+                                 (powerline-raw " " face2)
+                                 (powerline-raw "%6p" face1 'r)
                                  (when powerline-display-hud
-                                     (powerline-hud face3 face2 1)))))
+                                     (powerline-hud face3 face4 1)))))
                      (concat
                          (powerline-render lhs)
                          (powerline-fill face2 (powerline-width rhs))
