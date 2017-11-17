@@ -67,7 +67,7 @@
     `((t
           (
               :foreground ,monokai-blue
-              :background "black"
+              :background ,monokai-comments
               :inherit mode-line)))
     ""
     :group 'powerline)
