@@ -46,18 +46,10 @@
     "ieremii face 0."
     :group 'powerline)
 
-(defface ieremii-aoi
-    `((t
-          (
-              :background ,monokai-cyan
-              :inherit mode-line)))
-    ""
-    :group 'powerline)
-
 (defface Akihamiti-green
     `((t
           (
-              :background ,monokai-green
+              :foreground ,monokai-green
               :inherit mode-line)))
     ""
     :group 'powerline)
@@ -65,7 +57,7 @@
 (defface Akihamiti-red
     `((t
           (
-              :background ,monokai-red
+              :foreground ,monokai-red
               :inherit mode-line)))
     ""
     :group 'powerline)
@@ -73,7 +65,7 @@
 (defface Akihamiti-blue
     `((t
           (
-              :background ,monokai-blue
+              :foreground ,monokai-blue
               :inherit mode-line)))
     ""
     :group 'powerline)
