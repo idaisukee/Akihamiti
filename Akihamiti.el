@@ -91,6 +91,7 @@
                          (mode-line-buffer-id (if active 'mode-line-buffer-id 'mode-line-buffer-id-inactive))
                          (mode-line (if active 'mode-line 'mode-line-inactive))
                          (face0 (if active 'Akihamiti-green 'powerline-inactive2))
+                         (face0var (if active 'Akihamiti-green 'powerline-inactive2))
                          (face1 (if active 'Akihamiti-red 'powerline-inactive2))
                          (face2 (if active 'Akihamiti-blue 'powerline-inactive2))
                          (face3 (if active 'ieremii-giant-goldfish 'powerline-inactive2))
