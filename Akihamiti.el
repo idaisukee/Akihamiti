@@ -67,7 +67,7 @@
     `((t
           (
               :foreground ,monokai-blue
-              :background ,monokai-violet
+              :background "black"
               :inherit mode-line)))
     ""
     :group 'powerline)
@@ -108,7 +108,7 @@
                                  (powerline-raw "%*" face0 'l)
                                  (funcall separator-left face0 face2)
                                  (when powerline-display-buffer-size
-                                     (powerline-buffer-size face0 'l))
+                                     (powerline-buffer-size face2 'l))
                                  (powerline-raw " " face0)
                                  (powerline-raw buffer face0)
                                  (when (and (boundp 'which-func-mode) which-func-mode)
