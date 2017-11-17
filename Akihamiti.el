@@ -88,6 +88,7 @@
                          (face2 (if active 'Akihamiti-blue 'powerline-inactive2))
                          (face3 (if active 'ieremii-giant-goldfish 'powerline-inactive2))
                          (face4 (if active 'ieremii-unreal-food-pills 'powerline-inactive1))
+                         (buffer (or (buffer-file-name) (buffer-name)))
                          (separator-left
                              (intern
                                  (format "powerline-%s-%s"
@@ -107,7 +108,7 @@
                                      (powerline-buffer-size face0 'l))
                                  (powerline-raw " " face0)
                                  (powerline-raw " " face1)
-                                 (powerline-raw "%f %b" face0)
+                                 (powerline-raw buffer face0)
                                  ;;          (powerline-buffer-id mode-line-buffer-id 'l)
                                  (when (and (boundp 'which-func-mode) which-func-mode)
                                      (powerline-raw which-func-format nil 'l))
