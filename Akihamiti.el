@@ -1,51 +1,5 @@
 (require 'powerline)
 
-(defface ieremii-aoi-variant
-    '((t
-          (
-              :background "#69d2e7"
-              :foreground "#f38630"
-              :inherit mode-line)))
-    "ieremii face 0."
-    :group 'powerline)
-
-
-(defface ieremii-clean-pondwater
-    '((t
-          (
-              :background "#a7dbd8"
-              :foreground "black"
-              :inherit mode-line)))
-    "ieremii face 0."
-    :group 'powerline)
-
-(defface ieremii-beach-storm
-    '((t
-          (
-              :background "#e0e4cc"
-              :inherit mode-line)))
-    "ieremii face 0."
-    :group 'powerline)
-
-
-(defface ieremii-giant-goldfish
-    '((t
-          (
-              :background "#f38630"
-              :foreground "white"
-              :inherit mode-line)))
-    "ieremii face 0."
-    :group 'powerline)
-
-(defface ieremii-unreal-food-pills
-    '((t
-          (
-              :background "#fa6900"
-              :foreground "white"
-              :inherit mode-line)))
-    "ieremii face 0."
-    :group 'powerline)
-
 (defface Akihamiti-green
     `((t
           (
