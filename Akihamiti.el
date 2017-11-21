@@ -76,13 +76,10 @@
                          (mode-line (if active 'mode-line 'mode-line-inactive))
                          (face0 (if active 'Akihamiti-green 'powerline-inactive2))
                          (face0var
-                             (if
-                                 active
                                  (if
                                      (buffer-modified-p)
                                      'Akihamiti-red-var
-                                     'Akihamiti-blue-var)
-                                 'powerline-inactive2))
+                                     'Akihamiti-blue-var))
                          (face1 (if active 'Akihamiti-red 'powerline-inactive2))
                          (face2 (if active 'Akihamiti-blue 'powerline-inactive2))
                          (face3 (if active 'ieremii-giant-goldfish 'powerline-inactive2))
