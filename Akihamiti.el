@@ -106,8 +106,6 @@
                                      (powerline-buffer-size face0 'l))
                                  (powerline-raw " " face0)
                                  (powerline-raw buffer face0)
-                                 (when (and (boundp 'which-func-mode) which-func-mode)
-                                     (powerline-raw which-func-format nil 'l))
                                  (when (and (boundp 'erc-track-minor-mode) erc-track-minor-mode)
                                      (powerline-raw erc-modified-channels-object face0 'l))
                                  (powerline-major-mode face0 'l)
