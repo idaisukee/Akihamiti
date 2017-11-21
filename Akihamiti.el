@@ -85,6 +85,11 @@
                          (face3 (if active 'ieremii-giant-goldfish 'powerline-inactive2))
                          (face4 (if active 'ieremii-unreal-food-pills 'powerline-inactive1))
                          (buffer (or (buffer-file-name) (buffer-name)))
+                         (face1var
+                                 (if
+                                     (string= (format-mode-line mode-line-process) ":no process")
+                                     'Akihamiti-red-var
+                                     'Akihamiti-blue-var))
                          (separator-left
                              (intern
                                  (format "powerline-%s-%s"
@@ -109,7 +114,7 @@
                                  (when (and (boundp 'erc-track-minor-mode) erc-track-minor-mode)
                                      (powerline-raw erc-modified-channels-object face0 'l))
                                  (powerline-major-mode face0 'l)
-                                 (powerline-process face0)
+                                 (powerline-process face1var)
                                  (powerline-narrow face0 'l)
                                  (powerline-vc face0 'r)
                                  (funcall separator-left face0 face2)
