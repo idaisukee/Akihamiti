@@ -88,8 +88,8 @@
                          (face1var
                                  (if
                                      (string= (format-mode-line mode-line-process) ":no process")
-                                     'Akihamiti-red-var
-                                     'Akihamiti-blue-var))
+                                     'Akihamiti-blue-var
+                                     'Akihamiti-red-var))
                          (separator-left
                              (intern
                                  (format "powerline-%s-%s"
@@ -114,11 +114,13 @@
                                  (when (and (boundp 'erc-track-minor-mode) erc-track-minor-mode)
                                      (powerline-raw erc-modified-channels-object face0 'l))
                                  (powerline-major-mode face0 'l)
-                                 (powerline-process face1var)
                                  (powerline-narrow face0 'l)
                                  (powerline-vc face0 'r)
-                                 (funcall separator-left face0 face2)
+                                 (funcall separator-left face0 face1var)
+                                 (powerline-process face1var)
+                                 (funcall separator-left face1var face2)
                                  (powerline-raw (format "%s " (get-char-property (point) 'face)) face2 'l)
+
                                  (funcall separator-left face2 face0)
                                  (when (bound-and-true-p nyan-mode)
                                      (powerline-raw (list (nyan-create)) face0 'l))))
